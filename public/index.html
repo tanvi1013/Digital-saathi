@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7ef">
+    <meta name="description" content="Learn everyday digital skills with friendly, step-by-step lessons from Digital Saathi.">
+    <title>Digital Saathi | Learn at your own pace</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/catalog.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/api.js" defer></script>
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to main content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Digital Saathi home">
+          <span class="brand-mark" aria-hidden="true">स</span>
+          <span><strong>Digital Saathi</strong><small data-i18n="tagline">See. Hear. Practice. Learn.</small></span>
+        </a>
+        <nav class="primary-nav" id="primary-nav">
+          <a class="nav-link is-active" href="#home" data-route="home"><span aria-hidden="true">⌂</span><span data-i18n="home">Home</span></a>
+          <a class="nav-link" href="#learn" data-route="learn"><span aria-hidden="true">▦</span><span data-i18n="learn">Learn</span></a>
+          <a class="nav-link" href="#practice" data-route="practice"><span aria-hidden="true">◎</span><span data-i18n="practice">Practice</span></a>
+          <a class="nav-link" href="#talk" data-route="talk"><span aria-hidden="true">◖</span><span data-i18n="talk">Talk to Saathi</span></a>
+          <a class="nav-link" href="#progress" data-route="progress"><span aria-hidden="true">▤</span><span data-i18n="myProgress">My progress</span></a>
+          <a class="nav-link" href="#help" data-route="help"><span aria-hidden="true">?</span><span data-i18n="help">Help</span></a>
+          <a class="nav-link" href="#auth/login" data-route="account" id="account-nav"><span aria-hidden="true">♙</span><span data-i18n="account">Account</span></a>
+          <a class="nav-link" href="#admin" data-route="admin" id="admin-nav" hidden><span aria-hidden="true">✎</span><span data-i18n="admin">Admin</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="support-note"><span aria-hidden="true">♥</span><p data-i18n="supportNote">Learning takes time. Saathi is here with you.</p></div>
+          <button class="nav-link nav-button" type="button" data-action="settings"><span aria-hidden="true">⚙</span><span data-i18n="settings">Settings</span></button>
+          <button class="nav-link nav-button" type="button" data-action="sign-out" id="sign-out-button" hidden><span aria-hidden="true">↪</span><span data-i18n="signOut">Sign out</span></button>
+          <div class="profile-mini"><span class="avatar" aria-hidden="true">A</span><span><strong id="profile-name">Asha</strong><small id="profile-role" data-i18n="learner">Learner</small></span><button class="icon-button" type="button" data-action="profile" aria-label="Edit profile" title="Edit profile">✎</button></div>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" type="button" data-action="menu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb" id="breadcrumb"><span data-i18n="home">Home</span></div>
+          <div class="topbar-actions">
+            <label class="language-control"><span class="sr-only" data-i18n="language">Language</span><span aria-hidden="true">◎</span><select id="language-select" aria-label="Choose language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select></label>
+            <button class="senior-toggle" id="senior-toggle" type="button" aria-pressed="false"><span aria-hidden="true">◉</span><span data-i18n="seniorMode">Senior mode</span></button>
+          </div>
+        </header>
+        <main id="main-content" tabindex="-1"></main>
+        <footer class="footer"><span data-i18n="footer">Made for learning, at your own pace.</span><span class="safe-label"><span aria-hidden="true">●</span> <span data-i18n="safePractice">Safe practice only</span></span></footer>
+      </div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+  </body>
+</html>
